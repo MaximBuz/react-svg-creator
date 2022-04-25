@@ -1,8 +1,11 @@
 'use strict';
 require('chai').should();
+import {calculatePeak} from '../src/utils/calculations/peak';
 
 describe('WaveComponent', function () {
-  it('should run a test', () => {
-    true.should.be.true;
+  describe('PeakVariant', function () {
+    it('should return a string', () => {
+      calculatePeak().should.be.a('string')
+    })
   })
 })

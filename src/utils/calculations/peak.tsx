@@ -1,5 +1,8 @@
 // calculates svg data attribute for wave with edgy peaks
+import { generateRandomNumber } from './random';
+
 export function calculatePeak (
+  seed: number = 0,
   width: number = 540,
   height: number = 960,
   balance: number = 500,
@@ -12,13 +15,16 @@ export function calculatePeak (
   shadowX: number = 0,
   shadowY: number = 5,
   shadowDeviation: number = 15,
-  opcacity: number = 0.5
+  opcacity: number = 0.5,
 ) {
+  const randomNumber = generateRandomNumber(seed);
   const equal = width / breaks;
   const data = [`M0 ${balance}`];
   for (let n = 1; n <= breaks; n++) {
-    data.push(`L${n * equal} ${balance + (Math.random() - 0.5) * velocity}`);
+    data.push(`L${n * equal} ${balance + (randomNumber - 0.5) * velocity}`);
   }
-  return data.join(' ');
+  data.push(`L${width} ${height}`, `L0 ${height}Z`);
+  return {
+    dataString: data.join(' ')
+  };
 }
-console.log(calculatePeak());

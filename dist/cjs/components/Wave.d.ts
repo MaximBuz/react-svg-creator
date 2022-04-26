@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 export interface IWaveProps {
+    children: Array<ReactElement>;
 }
-export declare const Wave: React.FunctionComponent<IWaveProps>;
+declare const Wave: React.FunctionComponent<IWaveProps>;
+export default Wave;

@@ -31,7 +31,7 @@ function useMeasure<E extends Element = Element>(): UseMeasureResult<E> {
 
   const observer = useMemo(
     () =>
-      new (window as any).ResizeObserver((entries) => {
+      new (window as any).ResizeObserver((entries:any) => {
         if (entries[0]) {
           const { x, y, width, height, top, left, bottom, right } = entries[0].contentRect;
           setRect({ x, y, width, height, top, left, bottom, right });

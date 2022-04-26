@@ -1,5 +1,5 @@
 {
-  "name": "svg-creator",
+  "name": "svg-creator-for-react",
   "version": "1.0.0",
   "description": "React component librery providing customizable svg components",
   "main": "dist/cjs/index.js",

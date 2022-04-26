@@ -21,7 +21,7 @@ const Wave: React.FunctionComponent<IWaveProps> = (props) => {
   return (
     <div ref={ref} style={{ width: '100%', height: '100%' }}>
       <svg viewBox={`0 0 ${size.width} ${size.height}`} height="100%" width="100%">
-        <rect x="0" y="0" width={size.width} height={size.height} fill="lightblue"></rect>
+        <rect x="0" y="0" width={size.width} height={size.height} fill="lightgreen"></rect>
         <linearGradient id="linear-gradient">
           <stop offset="0%" stopColor={startWaveColor} stopOpacity="100%" />
           <stop offset="100%" stopColor={stopWaveColor} stopOpacity="100%" />

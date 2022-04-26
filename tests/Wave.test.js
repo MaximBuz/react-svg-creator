@@ -46,14 +46,14 @@ describe('WaveComponent', function () {
 
   describe('StackedVariant', function () {
     it('should return a string in dataString attribute of return', () => {
-      calculateStacked().dataString.should.be.a('string');
+      calculateStacked().should.be.a('array');
     });
     it('should return correctly calculated data string with default values, if no passed in arguments', () => {
-      calculateStacked(mocks.stacked.test1.seed).dataString.should.equal(mocks.stacked.test1.result);
+      calculateStacked(mocks.stacked.test1.seed).should.eql(mocks.stacked.test1.result);
     });
     it('should return correctly calculated data string with default values, given different seeds', () => {
-      calculateStacked(mocks.stacked.test2.seed).dataString.should.equal(mocks.stacked.test2.result);
-      calculateStacked(mocks.stacked.test3.seed).dataString.should.equal(mocks.stacked.test3.result);
+      calculateStacked(mocks.stacked.test2.seed).should.eql(mocks.stacked.test2.result);
+      calculateStacked(mocks.stacked.test3.seed).should.eql(mocks.stacked.test3.result);
     });
   });
 });
